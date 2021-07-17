@@ -11,10 +11,11 @@ button {
 
 img {
     height: 400px;
-    width: 500px;
-    overflow:hidden;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
 }
-
 
 .gallery {
     display: flex;
@@ -23,23 +24,29 @@ img {
     justify-content: center;
 }
 
-.gallery div {
+.photo-card {
     height: 500px;
-    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .5);
+    width: 700px;
+    box-shadow: 0 0 7px 2px rgb(91, 104, 91);
+    border-radius: 3px;
 }
 
-.gallery div:not(:nth-child(3n)) {
-    margin-right: 20px;
+.photo-card:nth-last-child(2n) {
+    margin-bottom: 20px;
+}
+
+.photo-card:nth-child(2n+1) {
+    margin-right: 40px;
 }
 
 #load-more-button {
-    margin-left: 40px;
+    margin-left: 10px;
     margin-bottom: 20px;
 }
 
 .search-form {
     margin-top: 20px;
-    margin-left: 40px;
+    margin-left: 10px;
 }
 
 .search-form input {
@@ -47,20 +54,18 @@ img {
     border-color: #FFFDD0;
 }
 
-.photo-card:not(:last-child) {
-    margin-bottom: 30px;
-}
-
 .stats {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-.stats p:not(:last-child) {
-    margin-right: 20px;
+.stats-item:not(:last-child) {
+    margin-right: 40px;
 }
 
 .is-hidden {
     opacity: 0;
 }
+
+

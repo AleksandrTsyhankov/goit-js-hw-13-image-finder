@@ -48,6 +48,10 @@ function onLoadMore() {
     galleryApiService.fetchArticles().then(hits =>  {
         appendGalleryMarkup(hits);
         smoothScrolling();
+
+        if (hits.length < 12) {
+            return refs.loadMoreBtn.classList.add('is-hidden');
+        }
         });
 }
 
@@ -61,7 +65,7 @@ function clearGallery() {
 
 function alertMsg() {
     alert({
-        text: "По Вашему запросу ничего не найдено."
+        text: "По Вашему запросу нет подходящих картинок."
     });
 }
 
