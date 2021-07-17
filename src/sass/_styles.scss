@@ -1,0 +1,66 @@
+body {
+    background-color: #2F4F4F;
+}
+
+button {
+    cursor: pointer;
+    background-color: #FFFDD0;
+    border-color:#FFFDD0;
+    border-radius: 3px;
+}
+
+img {
+    height: 400px;
+    width: 500px;
+    overflow:hidden;
+}
+
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery div {
+    height: 500px;
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .5);
+}
+
+.gallery div:not(:nth-child(3n)) {
+    margin-right: 20px;
+}
+
+#load-more-button {
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.search-form {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.search-form input {
+    border-radius: 3px;
+    border-color: #FFFDD0;
+}
+
+.photo-card:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.stats p:not(:last-child) {
+    margin-right: 20px;
+}
+
+.is-hidden {
+    opacity: 0;
+}
